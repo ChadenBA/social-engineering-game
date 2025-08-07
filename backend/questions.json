@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "question": "You receive an email saying you've won a prize — what do you do?",
+    "options": ["Click the link", "Ignore it", "Reply asking who sent it"],
+    "correctAnswer": 1,
+    "explanation": "Ignore it. It's likely a phishing attempt."
+  },
+  {
+    "id": 2,
+    "question": "Someone asks for your password via phone, claiming to be IT support. What do you do?",
+    "options": ["Give the password", "Hang up", "Ask for their ID"],
+    "correctAnswer": 1,
+    "explanation": "Real IT will never ask for your password."
+  },
+  
+    {
+      "id": 1,
+      "question": "You receive an email from your bank asking you to verify your account information. What should you do?",
+      "options": ["Click the link and verify", "Delete the email", "Call the bank directly"],
+      "correctAnswer": 2,
+      "explanation": "Always verify directly with the bank instead of clicking links in emails."
+    },
+   
+    {
+      "id": 3,
+      "question": "You find a USB drive in the parking lot. What should you do?",
+      "options": ["Plug it into your computer", "Hand it to IT", "Keep it for yourself"],
+      "correctAnswer": 1,
+      "explanation": "USB drives can contain malware; always report them to IT."
+    },
+    {
+      "id": 4,
+      "question": "A colleague asks you to share your login credentials for a project. What is the best response?",
+      "options": ["Share the credentials", "Refuse and explain why", "Ask them to log in with their own account"],
+      "correctAnswer": 1,
+      "explanation": "Sharing credentials violates security policies and can lead to breaches."
+    },
+    {
+      "id": 5,
+      "question": "You receive a text message claiming you've won a prize, but you need to provide personal information to claim it. What do you do?",
+      "options": ["Respond with the information", "Ignore the message", "Call the number provided"],
+      "correctAnswer": 1,
+      "explanation": "This is likely a phishing attempt; do not provide personal information."
+    },
+    {
+      "id": 6,
+      "question": "A stranger approaches you in the office and asks for help accessing a computer. What should you do?",
+      "options": ["Help them", "Ask for their identification", "Ignore them"],
+      "correctAnswer": 1,
+      "explanation": "Always verify the identity of anyone requesting access to secure areas."
+    },
+    {
+      "id": 7,
+      "question": "You receive a call from someone claiming to be from the government asking for your Social Security number. What is your response?",
+      "options": ["Provide the number", "Hang up", "Ask for their badge number"],
+      "correctAnswer": 1,
+      "explanation": "Government agencies will not ask for sensitive information over the phone."
+    },
+    {
+      "id": 8,
+      "question": "You notice someone tailgating you into a secure building. What should you do?",
+      "options": ["Let them in", "Confront them", "Report it to security"],
+      "correctAnswer": 2,
+      "explanation": "Tailgating is a security risk; always report suspicious behavior."
+    },
+    {
+      "id": 9,
+      "question": "A friend sends you a link to a website claiming to be a popular service. What should you check before clicking?",
+      "options": ["The URL for authenticity", "The number of clicks", "The website's color scheme"],
+      "correctAnswer": 1,
+      "explanation": "Always verify the URL to ensure it is legitimate before clicking."
+    },
+    {
+      "id": 10,
+      "question": "You receive a message on social media from someone you don't know, asking for your email address. What do you do?",
+      "options": ["Give them your email", "Ignore the message", "Ask why they need it"],
+      "correctAnswer": 1,
+      "explanation": "Be cautious; sharing personal information with strangers can lead to scams."
+    }
+  
+  
+]

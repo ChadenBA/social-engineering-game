@@ -1,0 +1,153 @@
+[
+    {
+      "id": 1,
+      "role": "attacker",
+      "situation": "You want to gain access to a company's internal system. What do you do first?",
+      "choices": [
+        {
+          "text": "Send a fake LinkedIn message to an employee",
+          "outcome": "The employee responds and reveals the team structure. You gain valuable info."
+        },
+        {
+          "text": "Try to guess the admin password",
+          "outcome": "Too risky. You're locked out quickly."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "role": "defender",
+      "situation": "You receive a call from 'IT support' asking for your credentials.",
+      "choices": [
+        {
+          "text": "Ask them to verify their identity",
+          "outcome": "They hang up — good job! It was a phishing call."
+        },
+        {
+          "text": "Give them your login info",
+          "outcome": "Oh no! You've been breached."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "role": "attacker",
+      "situation": "You want to install malware on a target's computer. What is your first step?",
+      "choices": [
+        {
+          "text": "Send a phishing email with a malicious attachment",
+          "outcome": "The target opens the attachment, and you gain access to their system."
+        },
+        {
+          "text": "Physically access their computer and install it directly",
+          "outcome": "Too risky! You get caught on camera."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "role": "defender",
+      "situation": "You notice a suspicious USB drive left in the office. What do you do?",
+      "choices": [
+        {
+          "text": "Plug it into your computer to see what's on it",
+          "outcome": "You've just infected your system with malware."
+        },
+        {
+          "text": "Report it to IT without touching it",
+          "outcome": "Good choice! IT safely disposes of it."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "role": "attacker",
+      "situation": "You want to gather information about a company's employees. What do you do?",
+      "choices": [
+        {
+          "text": "Create a fake company website and collect data through a form",
+          "outcome": "You gather personal information from unsuspecting employees."
+        },
+        {
+          "text": "Search for information on public social media profiles",
+          "outcome": "You find some info, but it's not as detailed."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "role": "defender",
+      "situation": "You receive an email with a link to a supposed company survey. What should you do?",
+      "choices": [
+        {
+          "text": "Click the link and complete the survey",
+          "outcome": "You've just given away your credentials to a phishing site."
+        },
+        {
+          "text": "Verify the email sender and check with your manager",
+          "outcome": "Smart move! The email was a phishing attempt."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "role": "attacker",
+      "situation": "You want to impersonate an employee to gain access to sensitive information. What do you do?",
+      "choices": [
+        {
+          "text": "Call the help desk pretending to be that employee",
+          "outcome": "You successfully reset their password and gain access."
+        },
+        {
+          "text": "Send an email from a spoofed address",
+          "outcome": "The email gets flagged as suspicious."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "role": "defender",
+      "situation": "A colleague asks you to share your login credentials for a project. What do you do?",
+      "choices": [
+        {
+          "text": "Share your credentials to help them out",
+          "outcome": "You've compromised your account and the company's security."
+        },
+        {
+          "text": "Politely refuse and suggest they use their own account",
+          "outcome": "Great job! You maintained security protocols."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "role": "attacker",
+      "situation": "You want to exploit a vulnerability in a company's software. What is your approach?",
+      "choices": [
+        {
+          "text": "Research online for known vulnerabilities and exploit them",
+          "outcome": "You successfully breach the system."
+        },
+        {
+          "text": "Attempt to brute-force the software's login",
+          "outcome": "You trigger security alerts and get locked out."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "role": "defender",
+      "situation": "You receive a text message from an unknown number claiming to be from your bank. What do you do?",
+      "choices": [
+        {
+          "text": "Respond with your account details to verify",
+          "outcome": "You've just fallen for a scam."
+        },
+        {
+          "text": "Contact your bank directly using official channels",
+          "outcome": "Well done! You avoided a potential scam."
+        }
+      ]
+    }
+  ]
+  

@@ -1,0 +1,114 @@
+:root {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #e0e0e0;
+  background-color: #0d1117;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 600;
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #8bc34a;
+  outline: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #00bcd4;
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #161b22;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  box-shadow: 0 0 8px #00bcd4aa;
+}
+
+button:hover,
+button:focus-visible {
+  border-color: #8bc34a;
+  background-color: #002f2f;
+  color: #8bc34a;
+  outline: none;
+  box-shadow: 0 0 12px #8bc34aaa;
+}
+
+/* ✅ FIXED THIS PART */
+#root {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+    box-shadow: none;
+  }
+
+  button:hover,
+  button:focus-visible {
+    border-color: #646cff;
+    background-color: #e0e0ff;
+    color: #213547;
+    box-shadow: none;
+  }
+}

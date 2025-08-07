@@ -1,0 +1,109 @@
+[
+    {
+      "id": 1,
+      "title": "You've won a prize!",
+"image": "http://127.0.0.1:5000/static/images/prize.jpeg",
+      "suspicious_areas": ["link", "from", "urgency"],
+      "explanation": {
+        "link": "Suspicious shortened URL.",
+        "from": "Fake email address pretending to be Amazon.",
+        "urgency": "Creates panic to click quickly."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 2,
+      "title": "Invoice from your recent purchase",
+      "image": "/images/invoice.webp",
+      "suspicious_areas": [],
+      "explanation": {},
+      "is_phishing": false
+    },
+    {
+      "id": 3,
+      "title": "Your account has been compromised!",
+      "image": "/images/account_alert.jpeg",
+      "suspicious_areas": ["link", "urgency"],
+      "explanation": {
+        "link": "Link directs to a fake login page.",
+        "urgency": "Pressure to act immediately without verifying."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 4,
+      "title": "Important security update required",
+      "image": "/images/security_update.jpeg",
+      "suspicious_areas": ["from", "link"],
+      "explanation": {
+        "from": "Sender's email does not match the official domain.",
+        "link": "Link leads to a suspicious website."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 5,
+      "title": "Congratulations! You've been selected for a survey",
+      "image": "/images/survey.jpeg",
+      "suspicious_areas": ["link", "urgency"],
+      "explanation": {
+        "link": "Link to a third-party site asking for personal information.",
+        "urgency": "Claims limited time offer to entice quick responses."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 6,
+      "title": "Payment confirmation for your subscription",
+      "image": "/images/payment_confirmation.webp",
+      "suspicious_areas": ["from"],
+      "explanation": {
+        "from": "Email address does not match the company's official domain."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 7,
+      "title": "Your package is on hold",
+      "image": "/images/package_hold.jpeg",
+      "suspicious_areas": ["link", "urgency"],
+      "explanation": {
+        "link": "Link leads to a phishing site asking for payment details.",
+        "urgency": "Creates a sense of urgency to resolve the issue quickly."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 8,
+      "title": "New message from your bank",
+      "image": "/images/bank_message.jpeg",
+      "suspicious_areas": ["from", "link"],
+      "explanation": {
+        "from": "Sender's email is not from the official bank domain.",
+        "link": "Link directs to a non-secure website."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 9,
+      "title": "Claim your refund now!",
+      "image": "/images/refund.jpeg",
+      "suspicious_areas": ["link", "urgency"],
+      "explanation": {
+        "link": "Link leads to a site requesting sensitive information.",
+        "urgency": "Claims the refund is only available for a limited time."
+      },
+      "is_phishing": true
+    },
+    {
+      "id": 10,
+      "title": "Your subscription has been renewed",
+      "image": "/images/subscription_renewal.jpeg",
+      "suspicious_areas": ["from"],
+      "explanation": {
+        "from": "Email address does not match the official service provider."
+      },
+      "is_phishing": true
+    }
+  ]
+  
