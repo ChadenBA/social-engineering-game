@@ -26,23 +26,7 @@ a:focus {
   outline: none;
 }
 
-html,
-body,
-#root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #0d1117;
-  color: #e0e0e0;
-  font-family: 'Courier New', Courier, monospace;
-  display: flex;
-  flex-direction: column;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Courier New', Courier, monospace;
@@ -79,13 +63,7 @@ button:focus-visible {
   box-shadow: 0 0 12px #8bc34aaa;
 }
 
-/* ✅ FIXED THIS PART */
-#root {
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-}
+
 
 /* Light mode overrides */
 @media (prefers-color-scheme: light) {
@@ -112,3 +90,4 @@ button:focus-visible {
     box-shadow: none;
   }
 }
+

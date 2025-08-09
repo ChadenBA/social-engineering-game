@@ -76,8 +76,9 @@ const styles: Record<string, CSSProperties> = {
     background: "#0d1117",
     color: "#e0e0e0",
     fontFamily: "'Courier New', monospace",
-    padding: "2rem",
-    minHeight: "100vh",
+    paddingTop: "8rem",
+
+  
   },
   card: {
     background: "#161b22",

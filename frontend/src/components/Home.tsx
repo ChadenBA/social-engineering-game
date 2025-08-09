@@ -1,17 +1,18 @@
 import React from "react";
 import { Shield, Lock, Key, AlertCircle, Wifi } from "lucide-react";
+import Footer from "./Footer";
 
 const floatingIcons = [
   { Icon: Shield, size: 48, color: "#00bcd4", top: 10, left: 700, delay: "0s" },
-  { Icon: Lock, size: 40, color: "#8bc34a", top: 120, left: 320, delay: "2.5s" },
-  { Icon: Key, size: 36, color: "#ff5722", top: 250, left: 90, delay: "4s" },
+  { Icon: Lock, size: 40, color: "#8bc34a", top: 700, left: 990, delay: "2.5s" },
+  { Icon: Key, size: 36, color: "#ff5722", top: 50, left: 90, delay: "4s" },
   { Icon: AlertCircle, size: 50, color: "#ff9800", top: 320, left: 350, delay: "1.7s" },
   { Icon: Wifi, size: 44, color: "#673ab7", top: 90, left: 420, delay: "3.2s" },
   { Icon: Shield, size: 48, color: "#00bcd4", top: 50, left: 30, delay: "0s" },
-  { Icon: Lock, size: 40, color: "#8bc34a", top: 120, left: 320, delay: "2.5s" },
-  { Icon: Key, size: 36, color: "#ff5722", top: 250, left: 90, delay: "4s" },
-  { Icon: AlertCircle, size: 50, color: "#ff9800", top: 320, left: 350, delay: "1.7s" },
-  { Icon: Wifi, size: 44, color: "#673ab7", top: 90, left: 420, delay: "3.2s" },
+  { Icon: Lock, size: 40, color: "#8bc34a", top: 520, left: 320, delay: "2.5s" },
+  { Icon: Key, size: 36, color: "#ff5722", top: 450, left: 620, delay: "4s" },
+  { Icon: AlertCircle, size: 50, color: "#ff9800", top: 720, left: 850, delay: "1.7s" },
+  { Icon: Wifi, size: 44, color: "#673ab7", top: 120, left: 720, delay: "3.2s" },
 ];
 
 
@@ -46,7 +47,10 @@ const Home: React.FC = () => {
           Sharpen your skills and stay safe in the digital world.
         </p>
       </div>
+      <div>
+      <Footer repoUrl="https://github.com/ChadenBA/social-engineering-game" />
 
+      </div>
       <style>{`
         @keyframes floatUpDown {
           0%, 100% { transform: translateY(0); }
@@ -54,19 +58,19 @@ const Home: React.FC = () => {
         }
       `}</style>
     </div>
+    
   );
+  
 };
+
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    position: "relative",
-    height: "100vh",
     backgroundColor: "#0d1117",
     color: "#e0e0e0",
     fontFamily: "'Courier New', monospace",
     overflow: "hidden",
-   
-    width: '100%', maxWidth: 900, padding: '2rem', boxSizing: 'border-box' 
+    width: '100%', padding: '2rem', boxSizing: 'border-box' 
   },
   floatingIcon: {
     position: "absolute",
@@ -78,10 +82,11 @@ const styles: Record<string, React.CSSProperties> = {
   },
   content: {
     position: "relative",
-    maxWidth: "600px",
     margin: "0 auto",
     textAlign: "center",
     zIndex: 10,
+    width: "1300px",
+    padding: "8rem"
   },
   title: {
     fontSize: "3rem",
@@ -93,6 +98,7 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1.6,
     marginBottom: "1rem",
   },
+  
 };
 
 export default Home;

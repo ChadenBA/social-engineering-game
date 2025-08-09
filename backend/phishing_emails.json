@@ -14,7 +14,7 @@
     {
       "id": 2,
       "title": "Invoice from your recent purchase",
-      "image": "/images/invoice.webp",
+      "image": "http://127.0.0.1:5000/static/images/invoice.webp",
       "suspicious_areas": [],
       "explanation": {},
       "is_phishing": false
@@ -22,7 +22,7 @@
     {
       "id": 3,
       "title": "Your account has been compromised!",
-      "image": "/images/account_alert.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/account_alert.jpeg",
       "suspicious_areas": ["link", "urgency"],
       "explanation": {
         "link": "Link directs to a fake login page.",
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "title": "Important security update required",
-      "image": "/images/security_update.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/security_update.jpeg",
       "suspicious_areas": ["from", "link"],
       "explanation": {
         "from": "Sender's email does not match the official domain.",
@@ -44,7 +44,7 @@
     {
       "id": 5,
       "title": "Congratulations! You've been selected for a survey",
-      "image": "/images/survey.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/survey.jpeg",
       "suspicious_areas": ["link", "urgency"],
       "explanation": {
         "link": "Link to a third-party site asking for personal information.",
@@ -55,7 +55,7 @@
     {
       "id": 6,
       "title": "Payment confirmation for your subscription",
-      "image": "/images/payment_confirmation.webp",
+      "image": "http://127.0.0.1:5000/static/images/payment_confirmation.webp",
       "suspicious_areas": ["from"],
       "explanation": {
         "from": "Email address does not match the company's official domain."
@@ -65,7 +65,7 @@
     {
       "id": 7,
       "title": "Your package is on hold",
-      "image": "/images/package_hold.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/package_hold.jpeg",
       "suspicious_areas": ["link", "urgency"],
       "explanation": {
         "link": "Link leads to a phishing site asking for payment details.",
@@ -76,7 +76,7 @@
     {
       "id": 8,
       "title": "New message from your bank",
-      "image": "/images/bank_message.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/bank_message.jpeg",
       "suspicious_areas": ["from", "link"],
       "explanation": {
         "from": "Sender's email is not from the official bank domain.",
@@ -87,7 +87,7 @@
     {
       "id": 9,
       "title": "Claim your refund now!",
-      "image": "/images/refund.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/refund.jpeg",
       "suspicious_areas": ["link", "urgency"],
       "explanation": {
         "link": "Link leads to a site requesting sensitive information.",
@@ -98,7 +98,7 @@
     {
       "id": 10,
       "title": "Your subscription has been renewed",
-      "image": "/images/subscription_renewal.jpeg",
+      "image": "http://127.0.0.1:5000/static/images/subscription_renewal.jpeg",
       "suspicious_areas": ["from"],
       "explanation": {
         "from": "Email address does not match the official service provider."

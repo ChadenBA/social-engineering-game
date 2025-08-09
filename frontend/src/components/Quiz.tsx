@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import type { Question } from "../types";
+import type { Question } from "../types/Question";
 
 const Quiz: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -45,11 +45,11 @@ const Quiz: React.FC = () => {
       background: "#0d1117",
       color: "#f0f6fc",
       fontFamily: "'Fira Code', monospace",
-      minHeight: "100vh",
-      padding: "2rem",
+      paddingTop: "2rem",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      width: "100%",
     }}>
       <h1 style={{
         color: "#58a6ff",

@@ -9,12 +9,10 @@ export default function App() {
   const [selectedGame, setSelectedGame] = useState("Home");
 
   return (
-    <div className="flex h-screen">
-      {/* Sidebar (Vertical) */}
+    <div>
       <Sidebar onSelect={setSelectedGame} />
 
-      {/* Main Content (Centered) */}
-      <main className="flex-1 flex items-center justify-center p-6 bg-gray-100">
+      <main className="ml-20 p-6">
         {selectedGame === "Home" && <Home />}
         {selectedGame === "Quiz" && <Quiz />}
         {selectedGame === "Phishing" && <PhishingGame />}
@@ -23,3 +21,4 @@ export default function App() {
     </div>
   );
 }
+
