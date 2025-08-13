@@ -69,12 +69,7 @@ export default function CyberSafety101() {
   const filteredTips: Tip[] =
     category === "All" ? tips : tips.filter(t => t.category === category);
 
-  // Share results
-  const handleShare = (): void => {
-    const text = `I just completed ${readCount}/${tips.length} Cyber Safety tips! 🛡️ #CyberAware`;
-    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-    window.open(shareUrl, "_blank");
-  };
+
 
   return (
     <div className="cyber-container">
