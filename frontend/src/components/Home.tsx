@@ -85,19 +85,20 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
     textAlign: "center",
     zIndex: 10,
-    width: "1300px",
-    padding: "8rem"
+    maxWidth: "1000px", 
+    padding: "4rem 1rem" 
   },
   title: {
-    fontSize: "3rem",
+    fontSize: "clamp(1.8rem, 5vw, 3rem)", 
     marginBottom: "1rem",
     color: "#00bcd4",
   },
   description: {
-    fontSize: "1.3rem",
+    fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
     lineHeight: 1.6,
     marginBottom: "1rem",
-  },
+  }
+  
   
 };
 

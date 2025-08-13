@@ -1,0 +1,97 @@
+.cyber-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e0e0e0;
+  }
+  
+  .daily-tip {
+    background: #161b22;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #00bcd4;
+  }
+  
+  .filters button {
+    background: #161b22;
+    color: "#00bcd4";
+    border: 1px solid #00bcd4;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    cursor: pointer;
+  }
+  .filters .active {
+    background: #00bcd4;
+    color: #161b22;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #00bcd4;
+    transition: width 0.3s ease;
+  }
+  
+  .cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .card {
+    perspective: 1000px;
+    cursor: pointer;
+    height: 200px;
+  }
+  .card-front, .card-back {
+    background: #161b22;
+    border: 1px solid #00bcd4;
+    border-radius: 8px;
+    padding: 1rem;
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+  }
+  .card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .card.flipped .card-front {
+    transform: rotateY(180deg);
+  }
+  .card.flipped .card-back {
+    transform: rotateY(0);
+  }
+  
+  .achievements {
+    margin-top: 2rem;
+  }
+  .achievements ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .share-btn {
+    background: #00bcd4;
+    color: #161b22;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  

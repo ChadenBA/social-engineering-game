@@ -52,8 +52,7 @@ const Quiz: React.FC = () => {
       width: "100%",
     }}>
       <h1 style={{
-        color: "#58a6ff",
-        textShadow: "0 0 10px #58a6ff",
+    color: "#00bcd4",
         marginBottom: "2rem",
       }}>
         🛡️ Social Engineering Awareness Quiz

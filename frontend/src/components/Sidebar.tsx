@@ -6,6 +6,8 @@ const menuItems = [
   { icon: <ShieldCheck size={30} />, label: "Quiz" },
   { icon: <MailCheck size={30} />, label: "Phishing" },
   { icon: <UserCheck size={30} />, label: "Role Play" },
+  { icon: <UserCheck size={30} />, label: "101" },
+
 ];
 
 interface SidebarProps {

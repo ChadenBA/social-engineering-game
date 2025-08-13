@@ -1,5 +1,5 @@
 import React from "react";
-import { Github } from "lucide-react"; // icon
+import { Github } from "lucide-react"; 
 
 interface FooterProps {
   repoUrl: string;
@@ -9,7 +9,7 @@ export default function Footer({ repoUrl }: FooterProps) {
   return (
     <footer
       style={{
-        marginTop : "6rem",
+        marginTop : "17rem",
         background: "#0d1117",
         color: "#e0e0e0",
         textAlign: "center",

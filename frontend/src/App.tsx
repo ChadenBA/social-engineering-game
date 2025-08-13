@@ -4,6 +4,7 @@ import Quiz from "./components/Quiz";
 import PhishingGame from "./components/PhishingGame";
 import RolePlayGame from "./components/RolePlayGame";
 import Home from "./components/Home";
+import CyberSafety101 from "./components/CyberSafety101";
 
 export default function App() {
   const [selectedGame, setSelectedGame] = useState("Home");
@@ -17,6 +18,8 @@ export default function App() {
         {selectedGame === "Quiz" && <Quiz />}
         {selectedGame === "Phishing" && <PhishingGame />}
         {selectedGame === "Role Play" && <RolePlayGame />}
+        {selectedGame === "101" && <CyberSafety101 />}
+
       </main>
     </div>
   );

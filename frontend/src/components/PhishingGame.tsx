@@ -47,7 +47,7 @@ const PhishingGame: React.FC = () => {
         paddingTop: "4rem",
 
         background: "#0d0d0d",
-        color: "#66ccff", 
+        color: "#00bcd4",
         padding: "3rem",
         fontFamily: "'Orbitron', sans-serif",
         borderRadius: "10px",
@@ -72,16 +72,17 @@ const PhishingGame: React.FC = () => {
       >
         <h3>{current.title}</h3>
         <img
-          src={current.image}
-          alt="email"
-          style={{
-            width: "30%",
-            border: "2px solid #3399ff",
-            borderRadius: "8px",
-            display: "block",
-            margin: "0 auto",
-          }}
-        />
+  src={current.image}
+  alt="email"
+  style={{
+    width: "100%", // full width on mobile
+    maxWidth: "400px", // limit max size
+    border: "2px solid #3399ff",
+    borderRadius: "8px",
+    display: "block",
+    margin: "0 auto",
+  }}
+/>
       </div>
 
       <div style={{ marginTop: "1.5rem" }}>

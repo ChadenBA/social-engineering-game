@@ -2,15 +2,14 @@
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: dark;
   color: #e0e0e0;
   background-color: #0d1117;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px; /* Base font size */
 }
 
 a {
@@ -26,8 +25,6 @@ a:focus {
   outline: none;
 }
 
-
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
@@ -36,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: clamp(2rem, 5vw, 3.2rem); /* Scales with viewport */
   line-height: 1.1;
 }
 
@@ -44,7 +41,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   font-family: 'Courier New', Courier, monospace;
   background-color: #161b22;
@@ -63,9 +60,7 @@ button:focus-visible {
   box-shadow: 0 0 12px #8bc34aaa;
 }
 
-
-
-/* Light mode overrides */
+/* Light mode */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -91,3 +86,38 @@ button:focus-visible {
   }
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    font-size: 15px; /* Slightly smaller text */
+  }
+
+  button {
+    padding: 0.8em 1em; /* Bigger touch target */
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%; 
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+}
+@media (max-width: 768px) {
+  .floating-icon {
+    display: none; 
+  }
+}
