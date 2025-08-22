@@ -26,10 +26,16 @@ const tips: Tip[] = [
     tip: "Don't Overshare Personal Info",
     example: "Posting your travel dates online can alert thieves your home is empty.",
     explanation: "Cybercriminals use public info to craft targeted attacks."
+  },
+  {
+    category: "Wi-Fi Security",
+    tip: "Avoid Public Wi-Fi for Sensitive Actions",
+    example: "Logging into your bank account on café Wi-Fi can expose your credentials.",
+    explanation: "Public networks are often unencrypted, allowing attackers to intercept your data. Use a VPN when necessary."
   }
 ];
 
-const categories: string[] = ["All", "Email Safety", "Passwords", "Social Media"];
+const categories: string[] = ["All", "Email Safety", "Passwords", "Social Media" , "Wi-Fi Security"];
 
 export default function CyberSafety101() {
   const [category, setCategory] = useState<string>("All");
@@ -38,13 +44,11 @@ export default function CyberSafety101() {
   const [achievements, setAchievements] = useState<string[]>([]);
   const [dailyTip, setDailyTip] = useState<Tip | null>(null);
 
-  // Daily tip logic
   useEffect(() => {
     const todayIndex = new Date().getDate() % tips.length;
     setDailyTip(tips[todayIndex]);
   }, []);
 
-  // Flip card
   const handleFlip = (index: number): void => {
     const newFlipped = [...flipped];
     if (!newFlipped[index]) {
@@ -53,7 +57,6 @@ export default function CyberSafety101() {
     newFlipped[index] = !newFlipped[index];
     setFlipped(newFlipped);
 
-    // Check for achievements
     if (readCount + 1 === tips.length) {
       unlockAchievement("Cyber Safety Master");
     }
@@ -65,7 +68,6 @@ export default function CyberSafety101() {
     }
   };
 
-  // Filter tips
   const filteredTips: Tip[] =
     category === "All" ? tips : tips.filter(t => t.category === category);
 
@@ -75,14 +77,12 @@ export default function CyberSafety101() {
     <div className="cyber-container">
       <h1>Cyber Safety 101</h1>
 
-      {/* Daily Tip */}
       {dailyTip && (
         <div className="daily-tip">
           <strong>Daily Tip:</strong> {dailyTip.tip}
         </div>
       )}
 
-      {/* Filters */}
       <div className="filters">
         {categories.map(cat => (
           <button
@@ -95,7 +95,6 @@ export default function CyberSafety101() {
         ))}
       </div>
 
-      {/* Progress Bar */}
       <div className="progress-bar">
         <div
           className="progress-fill"
@@ -104,7 +103,6 @@ export default function CyberSafety101() {
       </div>
       <p>{readCount} / {tips.length} tips read</p>
 
-      {/* Flashcards */}
       <div className="cards">
         {filteredTips.map((tip, index) => (
           <div
