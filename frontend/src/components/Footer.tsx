@@ -1,14 +1,17 @@
-import { Github } from "lucide-react"; 
+import { Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface FooterProps {
   repoUrl: string;
 }
 
 export default function Footer({ repoUrl }: FooterProps) {
+  const { t } = useTranslation("footer");
+
   return (
     <footer
       style={{
-        marginTop : "17rem",
+        marginTop: "17rem",
         background: "#0d1117",
         color: "#e0e0e0",
         textAlign: "center",
@@ -20,14 +23,22 @@ export default function Footer({ repoUrl }: FooterProps) {
       }}
       onClick={() => window.open(repoUrl, "_blank")}
     >
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+        }}
+      >
         <Github size={20} color="#00bcd4" />
-        <span>⭐ Give this project a star!</span>
+        <span>{t("star")}</span>
       </div>
       <p>
-        ▷ Designed and built by <strong>Chaden ben ammar</strong> © {new Date().getFullYear()}
+        {t("designed")} <strong>Chaden ben ammar</strong> ©{" "}
+        {new Date().getFullYear()}
       </p>
-      <p>Created by me, sprinkled with a little magic ✨</p>
+      <p>{t("created")}</p>
     </footer>
   );
 }

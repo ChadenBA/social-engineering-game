@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import type { PhishingEmail } from "../types/PhishingEmail";
+import type { PhishingEmail , Language } from "../types/PhishingEmail";
+import { useTranslation } from "react-i18next";
 
 const phishingIcons: Record<string, string> = {
   from: "📧",
@@ -14,9 +15,11 @@ const PhishingGame: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [clicked, setClicked] = useState<string[]>([]);
   const [showResult, setShowResult] = useState(false);
+  const { t, i18n } = useTranslation();
+  const language = (["en", "fr"].includes(i18n.language) ? i18n.language : "en") as Language;
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/api/phishing-emails").then((res) => {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/phishing-emails`).then((res) => {
       setEmails(res.data);
     });
   }, []);
@@ -45,7 +48,6 @@ const PhishingGame: React.FC = () => {
     <div
       style={{
         paddingTop: "4rem",
-
         background: "#0d0d0d",
         color: "#00bcd4",
         padding: "3rem",
@@ -53,14 +55,15 @@ const PhishingGame: React.FC = () => {
         borderRadius: "10px",
         maxWidth: "800px",
         margin: "auto",
-        marginTop:  "3rem",
-        boxShadow: "0 0 20px #3399ff", 
+        marginTop: "3rem",
+        boxShadow: "0 0 20px #3399ff",
       }}
     >
       <h2 style={{ borderBottom: "2px solid #3399ff", paddingBottom: "0.5rem" }}>
-        🕵️‍♂️ Detect the Phishing Clues!
+        {t("detect_phishing")}
       </h2>
 
+      {/* Email Card */}
       <div
         style={{
           border: "2px solid #333",
@@ -70,36 +73,43 @@ const PhishingGame: React.FC = () => {
           padding: "1rem",
         }}
       >
-        <h3>{current.title}</h3>
+        <h3>{current.title[language]}</h3>
         <img
-  src={current.image}
-  alt="email"
-  style={{
-    width: "100%", // full width on mobile
-    maxWidth: "400px", // limit max size
-    border: "2px solid #3399ff",
-    borderRadius: "8px",
-    display: "block",
-    margin: "0 auto",
-  }}
-/>
+  src={`${import.meta.env.VITE_API_URL}/${current.image}`}          alt="email"
+          style={{
+            width: "100%",
+            maxWidth: "400px",
+            border: "2px solid #3399ff",
+            borderRadius: "8px",
+            display: "block",
+            margin: "0 auto",
+          }}
+        />
       </div>
 
+      {/* Clickable Parts */}
       <div style={{ marginTop: "1.5rem" }}>
-        <p>🧠 Click the parts of the email you think are suspicious:</p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1rem" }}>
-          {["from", "link", "urgency", "attachment"].map((part) => (
-            <button
-              key={part}
-              onClick={() => handleClick(part)}
+        {t("click_parts")}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "1rem",
+            marginTop: "1rem",
+          }}
+        >
+         {["from", "link", "urgency", "attachment"].map((part) => (
+  <button
+    key={part}
+    onClick={() => handleClick(part)}
               style={{
                 padding: "1rem",
                 border: "2px solid #3399ff",
                 borderRadius: "8px",
                 background: clicked.includes(part)
                   ? current.suspicious_areas.includes(part)
-                    ? "#003366" // Blue for correct
-                    : "#660000" // Red for wrong
+                    ? "#003366" 
+                    : "#660000" 
                   : "#1a1a1a",
                 color: "#66ccff",
                 cursor: "pointer",
@@ -108,11 +118,12 @@ const PhishingGame: React.FC = () => {
                 transition: "0.3s",
               }}
             >
-              {phishingIcons[part]} {part.toUpperCase()}
+              {phishingIcons[part]} {t(`parts.${part}`)}
             </button>
           ))}
         </div>
 
+        {/* Controls */}
         <div style={{ marginTop: "2rem", display: "flex", gap: "1rem" }}>
           <button
             onClick={checkAnswers}
@@ -129,7 +140,7 @@ const PhishingGame: React.FC = () => {
               boxShadow: "0 0 10px #3399ff",
             }}
           >
-            🚨 Reveal Clues
+            {t("reveal_clues")}
           </button>
 
           <button
@@ -142,15 +153,17 @@ const PhishingGame: React.FC = () => {
               borderRadius: "5px",
               color: "#fff",
               fontWeight: "bold",
-              cursor: currentIndex >= emails.length - 1 ? "not-allowed" : "pointer",
+              cursor:
+                currentIndex >= emails.length - 1 ? "not-allowed" : "pointer",
               fontSize: "1rem",
               boxShadow: "0 0 10px #0055cc",
             }}
           >
-            ⏭ Next Email
+            {t("next_email")}
           </button>
         </div>
 
+        {/* Results */}
         {showResult && (
           <div
             style={{
@@ -161,13 +174,17 @@ const PhishingGame: React.FC = () => {
               border: "2px dashed #3399ff",
             }}
           >
-            <h4>🔍 Clue Breakdown</h4>
+            <h4>{t("clue_breakdown")}</h4>
             <ul>
-              {Object.entries(current.explanation).map(([key, val]) => (
-                <li key={key}>
-                  <strong>{phishingIcons[key]} {key}:</strong> {val}
-                </li>
-              ))}
+            {Object.entries(current.explanation).map(([key, val]) => {
+  const explanation = val as Record<Language, string>; // 👈 cast once
+  return (
+    <li key={key}>
+      <strong>{phishingIcons[key]} {key}:</strong>{" "}
+      {explanation[language]}
+    </li>
+  );
+})}
             </ul>
           </div>
         )}

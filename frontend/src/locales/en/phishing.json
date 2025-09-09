@@ -1,0 +1,15 @@
+{
+    "detect_phishing": "🕵️‍♂️ Detect the Phishing Clues!",
+    "click_parts": "🧠 Click the parts of the email you think are suspicious:",
+    "reveal_clues": "🚨 Reveal Clues",
+    "next_email": "⏭ Next Email",
+    "clue_breakdown": "🔍 Clue Breakdown",
+    "parts": {
+      "from": "Sender",
+      "link": "Link",
+      "urgency": "Urgency",
+      "attachment": "Attachment"
+    },
+    "loading": "🛠️ Loading Cyber Intel..."
+  }
+  

@@ -1,0 +1,42 @@
+{
+    "title": "Sécurité Informatique 101",
+    "dailyTip": "Astuce du jour",
+    "categories": {
+      "all": "Tous",
+      "email": "Sécurité des e-mails",
+      "passwords": "Mots de passe",
+      "social": "Réseaux sociaux",
+      "wifi": "Sécurité Wi-Fi"
+    },
+    "tips": [
+      {
+        "category": "Sécurité des e-mails",
+        "tip": "Vérifiez l'adresse de l'expéditeur",
+        "example": "Phishing : support@bank-secure-login.com vs Réel : support@bank.com",
+        "explanation": "Les fraudeurs utilisent des domaines ressemblants pour vous faire croire qu’un e-mail est légitime."
+      },
+      {
+        "category": "Mots de passe",
+        "tip": "Utilisez l’authentification multifactorielle",
+        "example": "Même si quelqu'un vole votre mot de passe, l’AMF l'empêche de se connecter.",
+        "explanation": "Des applis comme Google Authenticator ajoutent une couche de protection supplémentaire."
+      },
+      {
+        "category": "Réseaux sociaux",
+        "tip": "Ne partagez pas trop d'infos personnelles",
+        "example": "Publier vos dates de voyage peut alerter les voleurs que votre maison est vide.",
+        "explanation": "Les cybercriminels utilisent les infos publiques pour cibler leurs attaques."
+      },
+      {
+        "category": "Sécurité Wi-Fi",
+        "tip": "Évitez le Wi-Fi public pour les actions sensibles",
+        "example": "Se connecter à votre banque sur le Wi-Fi d’un café peut exposer vos identifiants.",
+        "explanation": "Les réseaux publics sont souvent non chiffrés, permettant aux attaquants d’intercepter vos données. Utilisez un VPN si nécessaire."
+      }
+    ],
+    "progress": "{{read}} / {{total}} astuces lues",
+    "example": "Exemple",
+    "why": "Pourquoi",
+    "achievement": "Maître de la sécurité informatique"
+  }
+  

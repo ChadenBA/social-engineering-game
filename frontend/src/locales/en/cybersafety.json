@@ -1,0 +1,42 @@
+{
+    "title": "Cyber Safety 101",
+    "dailyTip": "Daily Tip",
+    "categories": {
+      "all": "All",
+      "email": "Email Safety",
+      "passwords": "Passwords",
+      "social": "Social Media",
+      "wifi": "Wi-Fi Security"
+    },
+    "tips": [
+      {
+        "category": "Email Safety",
+        "tip": "Check the Sender's Email",
+        "example": "Phishing: support@bank-secure-login.com vs Real: support@bank.com",
+        "explanation": "Scammers use lookalike domains to trick you into thinking an email is legitimate."
+      },
+      {
+        "category": "Passwords",
+        "tip": "Use Multi-Factor Authentication",
+        "example": "Even if someone steals your password, MFA stops them from logging in.",
+        "explanation": "Apps like Google Authenticator add an extra layer of protection."
+      },
+      {
+        "category": "Social Media",
+        "tip": "Don't Overshare Personal Info",
+        "example": "Posting your travel dates online can alert thieves your home is empty.",
+        "explanation": "Cybercriminals use public info to craft targeted attacks."
+      },
+      {
+        "category": "Wi-Fi Security",
+        "tip": "Avoid Public Wi-Fi for Sensitive Actions",
+        "example": "Logging into your bank account on café Wi-Fi can expose your credentials.",
+        "explanation": "Public networks are often unencrypted, allowing attackers to intercept your data. Use a VPN when necessary."
+      }
+    ],
+    "progress": "{{read}} / {{total}} tips read",
+    "example": "Example",
+    "why": "Why",
+    "achievement": "Cyber Safety Master"
+  }
+  

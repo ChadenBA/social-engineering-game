@@ -1,0 +1,14 @@
+
+  {
+    "quiz_title": "🛡️ Quiz de sensibilisation au social engineering",
+    "loading": "Chargement...",
+    "question": "Question {{current}} sur {{total}}",
+    "explanation": "💡 Explication",
+    "next": "Suivant →",
+    "quiz_completed": "✅ Quiz terminé !",
+    "your_score": "Votre score",
+    "expert": "🧠 Défenseur Expert",
+    "intermediate": "🛡️ Intermédiaire",
+    "beginner": "👶 Débutant – Continuez à apprendre !"
+  }
+  

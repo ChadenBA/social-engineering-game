@@ -1,109 +1,189 @@
 [
-    {
-      "id": 1,
-      "title": "You've won a prize!",
-"image": "http://127.0.0.1:5000/static/images/prize.jpeg",
-      "suspicious_areas": ["link", "from", "urgency"],
-      "explanation": {
-        "link": "Suspicious shortened URL.",
-        "from": "Fake email address pretending to be Amazon.",
-        "urgency": "Creates panic to click quickly."
-      },
-      "is_phishing": true
+  {
+    "id": 1,
+    "title": {
+      "en": "You've won a prize!",
+      "fr": "Vous avez gagné un prix !"
     },
-    {
-      "id": 2,
-      "title": "Invoice from your recent purchase",
-      "image": "http://127.0.0.1:5000/static/images/invoice.webp",
-      "suspicious_areas": [],
-      "explanation": {},
-      "is_phishing": false
-    },
-    {
-      "id": 3,
-      "title": "Your account has been compromised!",
-      "image": "http://127.0.0.1:5000/static/images/account_alert.jpeg",
-      "suspicious_areas": ["link", "urgency"],
-      "explanation": {
-        "link": "Link directs to a fake login page.",
-        "urgency": "Pressure to act immediately without verifying."
+    "image": "static/images/prize.jpeg",
+    "suspicious_areas": ["link", "from", "urgency"],
+    "explanation": {
+      "link": {
+        "en": "Suspicious shortened URL.",
+        "fr": "URL raccourcie suspecte."
       },
-      "is_phishing": true
-    },
-    {
-      "id": 4,
-      "title": "Important security update required",
-      "image": "http://127.0.0.1:5000/static/images/security_update.jpeg",
-      "suspicious_areas": ["from", "link"],
-      "explanation": {
-        "from": "Sender's email does not match the official domain.",
-        "link": "Link leads to a suspicious website."
+      "from": {
+        "en": "Fake email address pretending to be Amazon.",
+        "fr": "Adresse e-mail falsifiée prétendant être Amazon."
       },
-      "is_phishing": true
+      "urgency": {
+        "en": "Creates panic to click quickly.",
+        "fr": "Crée la panique pour cliquer rapidement."
+      }
     },
-    {
-      "id": 5,
-      "title": "Congratulations! You've been selected for a survey",
-      "image": "http://127.0.0.1:5000/static/images/survey.jpeg",
-      "suspicious_areas": ["link", "urgency"],
-      "explanation": {
-        "link": "Link to a third-party site asking for personal information.",
-        "urgency": "Claims limited time offer to entice quick responses."
-      },
-      "is_phishing": true
+    "is_phishing": true
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Invoice from your recent purchase",
+      "fr": "Facture de votre achat récent"
     },
-    {
-      "id": 6,
-      "title": "Payment confirmation for your subscription",
-      "image": "http://127.0.0.1:5000/static/images/payment_confirmation.webp",
-      "suspicious_areas": ["from"],
-      "explanation": {
-        "from": "Email address does not match the company's official domain."
-      },
-      "is_phishing": true
+    "image": "static/images/invoice.webp",
+    "suspicious_areas": [],
+    "explanation": {},
+    "is_phishing": false
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Your account has been compromised!",
+      "fr": "Votre compte a été compromis !"
     },
-    {
-      "id": 7,
-      "title": "Your package is on hold",
-      "image": "http://127.0.0.1:5000/static/images/package_hold.jpeg",
-      "suspicious_areas": ["link", "urgency"],
-      "explanation": {
-        "link": "Link leads to a phishing site asking for payment details.",
-        "urgency": "Creates a sense of urgency to resolve the issue quickly."
+    "image": "static/images/account_alert.jpeg",
+    "suspicious_areas": ["link", "urgency"],
+    "explanation": {
+      "link": {
+        "en": "Link directs to a fake login page.",
+        "fr": "Le lien dirige vers une fausse page de connexion."
       },
-      "is_phishing": true
+      "urgency": {
+        "en": "Pressure to act immediately without verifying.",
+        "fr": "Pression pour agir immédiatement sans vérifier."
+      }
     },
-    {
-      "id": 8,
-      "title": "New message from your bank",
-      "image": "http://127.0.0.1:5000/static/images/bank_message.jpeg",
-      "suspicious_areas": ["from", "link"],
-      "explanation": {
-        "from": "Sender's email is not from the official bank domain.",
-        "link": "Link directs to a non-secure website."
-      },
-      "is_phishing": true
+    "is_phishing": true
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Important security update required",
+      "fr": "Mise à jour de sécurité importante requise"
     },
-    {
-      "id": 9,
-      "title": "Claim your refund now!",
-      "image": "http://127.0.0.1:5000/static/images/refund.jpeg",
-      "suspicious_areas": ["link", "urgency"],
-      "explanation": {
-        "link": "Link leads to a site requesting sensitive information.",
-        "urgency": "Claims the refund is only available for a limited time."
+    "image": "static/images/security_update.jpeg",
+    "suspicious_areas": ["from", "link"],
+    "explanation": {
+      "from": {
+        "en": "Sender's email does not match the official domain.",
+        "fr": "L'adresse de l'expéditeur ne correspond pas au domaine officiel."
       },
-      "is_phishing": true
+      "link": {
+        "en": "Link leads to a suspicious website.",
+        "fr": "Le lien mène vers un site suspect."
+      }
     },
-    {
-      "id": 10,
-      "title": "Your subscription has been renewed",
-      "image": "http://127.0.0.1:5000/static/images/subscription_renewal.jpeg",
-      "suspicious_areas": ["from"],
-      "explanation": {
-        "from": "Email address does not match the official service provider."
+    "is_phishing": true
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Congratulations! You've been selected for a survey",
+      "fr": "Félicitations ! Vous avez été sélectionné pour un sondage"
+    },
+    "image": "static/images/survey.jpeg",
+    "suspicious_areas": ["link", "urgency"],
+    "explanation": {
+      "link": {
+        "en": "Link to a third-party site asking for personal information.",
+        "fr": "Lien vers un site tiers demandant des informations personnelles."
       },
-      "is_phishing": true
-    }
-  ]
-  
+      "urgency": {
+        "en": "Claims limited time offer to entice quick responses.",
+        "fr": "Affirme qu'il s'agit d'une offre limitée pour inciter à répondre rapidement."
+      }
+    },
+    "is_phishing": true
+  },
+  {
+    "id": 6,
+    "title": {
+      "en": "Payment confirmation for your subscription",
+      "fr": "Confirmation de paiement pour votre abonnement"
+    },
+    "image": "static/images/payment_confirmation.webp",
+    "suspicious_areas": ["from"],
+    "explanation": {
+      "from": {
+        "en": "Email address does not match the company's official domain.",
+        "fr": "L'adresse e-mail ne correspond pas au domaine officiel de l'entreprise."
+      }
+    },
+    "is_phishing": true
+  },
+  {
+    "id": 7,
+    "title": {
+      "en": "Your package is on hold",
+      "fr": "Votre colis est en attente"
+    },
+    "image": "static/images/package_hold.jpeg",
+    "suspicious_areas": ["link", "urgency"],
+    "explanation": {
+      "link": {
+        "en": "Link leads to a phishing site asking for payment details.",
+        "fr": "Le lien mène à un site de phishing demandant des informations de paiement."
+      },
+      "urgency": {
+        "en": "Creates a sense of urgency to resolve the issue quickly.",
+        "fr": "Crée un sentiment d'urgence pour résoudre rapidement le problème."
+      }
+    },
+    "is_phishing": true
+  },
+  {
+    "id": 8,
+    "title": {
+      "en": "New message from your bank",
+      "fr": "Nouveau message de votre banque"
+    },
+    "image": "static/images/bank_message.jpeg",
+    "suspicious_areas": ["from", "link"],
+    "explanation": {
+      "from": {
+        "en": "Sender's email is not from the official bank domain.",
+        "fr": "L'adresse e-mail de l'expéditeur ne provient pas du domaine officiel de la banque."
+      },
+      "link": {
+        "en": "Link directs to a non-secure website.",
+        "fr": "Le lien dirige vers un site non sécurisé."
+      }
+    },
+    "is_phishing": true
+  },
+  {
+    "id": 9,
+    "title": {
+      "en": "Claim your refund now!",
+      "fr": "Réclamez votre remboursement maintenant !"
+    },
+    "image": "static/images/refund.jpeg",
+    "suspicious_areas": ["link", "urgency"],
+    "explanation": {
+      "link": {
+        "en": "Link leads to a site requesting sensitive information.",
+        "fr": "Le lien mène vers un site demandant des informations sensibles."
+      },
+      "urgency": {
+        "en": "Claims the refund is only available for a limited time.",
+        "fr": "Affirme que le remboursement n'est disponible que pour une durée limitée."
+      }
+    },
+    "is_phishing": true
+  },
+  {
+    "id": 10,
+    "title": {
+      "en": "Your subscription has been renewed",
+      "fr": "Votre abonnement a été renouvelé"
+    },
+    "image": "static/images/subscription_renewal.jpeg",
+    "suspicious_areas": ["from"],
+    "explanation": {
+      "from": {
+        "en": "Email address does not match the official service provider.",
+        "fr": "L'adresse e-mail ne correspond pas au fournisseur de services officiel."
+      }
+    },
+    "is_phishing": true
+  }
+]

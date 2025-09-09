@@ -1,0 +1,12 @@
+{
+    "quiz_title": "🛡️ Social Engineering Awareness Quiz",
+    "loading": "Loading...",
+    "question": "Question {{current}} of {{total}}",
+    "explanation": "💡 Explanation",
+    "next": "Next →",
+    "quiz_completed": "✅ Quiz Completed!",
+    "your_score": "Your Score",
+    "expert": "🧠 Expert Defender",
+    "intermediate": "🛡️ Intermediate",
+    "beginner": "👶 Beginner – Keep Learning!"
+  }

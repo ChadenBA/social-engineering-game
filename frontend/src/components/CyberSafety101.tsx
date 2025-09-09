@@ -1,4 +1,5 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./CyberSafety101.css";
 
 type Tip = {
@@ -8,37 +9,19 @@ type Tip = {
   explanation: string;
 };
 
-const tips: Tip[] = [
-  {
-    category: "Email Safety",
-    tip: "Check the Sender's Email",
-    example: "Phishing: support@bank-secure-login.com vs Real: support@bank.com",
-    explanation: "Scammers use lookalike domains to trick you into thinking an email is legitimate."
-  },
-  {
-    category: "Passwords",
-    tip: "Use Multi-Factor Authentication",
-    example: "Even if someone steals your password, MFA stops them from logging in.",
-    explanation: "Apps like Google Authenticator add an extra layer of protection."
-  },
-  {
-    category: "Social Media",
-    tip: "Don't Overshare Personal Info",
-    example: "Posting your travel dates online can alert thieves your home is empty.",
-    explanation: "Cybercriminals use public info to craft targeted attacks."
-  },
-  {
-    category: "Wi-Fi Security",
-    tip: "Avoid Public Wi-Fi for Sensitive Actions",
-    example: "Logging into your bank account on café Wi-Fi can expose your credentials.",
-    explanation: "Public networks are often unencrypted, allowing attackers to intercept your data. Use a VPN when necessary."
-  }
-];
-
-const categories: string[] = ["All", "Email Safety", "Passwords", "Social Media" , "Wi-Fi Security"];
-
 export default function CyberSafety101() {
-  const [category, setCategory] = useState<string>("All");
+  const { t } = useTranslation("cyber");
+
+  const tips = t("tips", { returnObjects: true }) as Tip[];
+  const categories: string[] = [
+    t("categories.all"),
+    t("categories.email"),
+    t("categories.passwords"),
+    t("categories.social"),
+    t("categories.wifi")
+  ];
+
+  const [category, setCategory] = useState<string>(t("categories.all"));
   const [flipped, setFlipped] = useState<boolean[]>(Array(tips.length).fill(false));
   const [readCount, setReadCount] = useState<number>(0);
   const [achievements, setAchievements] = useState<string[]>([]);
@@ -47,7 +30,7 @@ export default function CyberSafety101() {
   useEffect(() => {
     const todayIndex = new Date().getDate() % tips.length;
     setDailyTip(tips[todayIndex]);
-  }, []);
+  }, [tips]);
 
   const handleFlip = (index: number): void => {
     const newFlipped = [...flipped];
@@ -58,7 +41,7 @@ export default function CyberSafety101() {
     setFlipped(newFlipped);
 
     if (readCount + 1 === tips.length) {
-      unlockAchievement("Cyber Safety Master");
+      unlockAchievement(t("achievement"));
     }
   };
 
@@ -69,17 +52,15 @@ export default function CyberSafety101() {
   };
 
   const filteredTips: Tip[] =
-    category === "All" ? tips : tips.filter(t => t.category === category);
-
-
+    category === t("categories.all") ? tips : tips.filter(tip => tip.category === category);
 
   return (
     <div className="cyber-container">
-      <h1>Cyber Safety 101</h1>
+      <h1>{t("title")}</h1>
 
       {dailyTip && (
         <div className="daily-tip">
-          <strong>Daily Tip:</strong> {dailyTip.tip}
+          <strong>{t("dailyTip")}:</strong> {dailyTip.tip}
         </div>
       )}
 
@@ -101,7 +82,7 @@ export default function CyberSafety101() {
           style={{ width: `${(readCount / tips.length) * 100}%` }}
         ></div>
       </div>
-      <p>{readCount} / {tips.length} tips read</p>
+      <p>{t("progress", { read: readCount, total: tips.length })}</p>
 
       <div className="cards">
         {filteredTips.map((tip, index) => (
@@ -112,19 +93,17 @@ export default function CyberSafety101() {
           >
             <div className="card-front">
               <h2>{tip.tip}</h2>
-              <p>Category: {tip.category}</p>
+              <p>{t("categories.all")}: {tip.category}</p>
             </div>
             <div className="card-back">
-              <strong>Example:</strong>
+              <strong>{t("example")}:</strong>
               <p>{tip.example}</p>
-              <strong>Why:</strong>
+              <strong>{t("why")}:</strong>
               <p>{tip.explanation}</p>
             </div>
           </div>
         ))}
       </div>
-
-     
     </div>
   );
 }

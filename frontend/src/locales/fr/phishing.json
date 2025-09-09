@@ -1,0 +1,15 @@
+{
+    "detect_phishing": "🕵️‍♂️ Détectez les indices de phishing !",
+    "click_parts": "🧠 Cliquez sur les parties de l'email que vous pensez suspectes :",
+    "reveal_clues": "🚨 Révéler les indices",
+    "next_email": "⏭ Email suivant",
+    "clue_breakdown": "🔍 Analyse des indices",
+    "parts": {
+      "from": "Expéditeur",
+      "link": "Lien",
+      "urgency": "Urgence",
+      "attachment": "Pièce jointe"
+    },
+    "loading": "🛠️ Chargement des informations cyber..."
+  }
+  
