@@ -89,13 +89,11 @@ const styles: Record<string, React.CSSProperties> = {
   },
   title: {
     fontSize: "clamp(1.8rem, 5vw, 3rem)",
-    marginBottom: "0.5rem",
     color: "#00bcd4"
   },
   description: {
     fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
     lineHeight: 1.6,
-    marginBottom: "0.5rem"
   }
 };
 
