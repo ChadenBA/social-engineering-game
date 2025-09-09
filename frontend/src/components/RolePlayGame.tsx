@@ -14,7 +14,7 @@ const RolePlayGame: React.FC = () => {
   const language = (["en", "fr"].includes(i18n.language) ? i18n.language : "en") as Language;
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/api/roleplay-scenarios").then((res) => {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/roleplay-scenarios`).then((res) => {
       setScenarios(res.data);
     });
   }, []);
