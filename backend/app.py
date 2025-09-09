@@ -1,10 +1,12 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import json
 import os
 
 static_folder_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
 app = Flask(__name__, static_folder=static_folder_path)
 
+CORS(app, origins=["https://social-engineering-game.onrender.com"])
 
 
 
