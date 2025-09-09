@@ -6,7 +6,6 @@ import {
   UserCheck,
   Home as HomeIcon,
 } from "lucide-react";
-import i18n from "i18next";
 
 const menuItems = [
   { icon: <HomeIcon size={24} />, label: "Home" },

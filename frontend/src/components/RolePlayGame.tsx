@@ -9,7 +9,7 @@ const RolePlayGame: React.FC = () => {
   const [scenarios, setScenarios] = useState<RolePlayScenario[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
-  const { t, i18n } = useTranslation("quiz");
+  const { i18n } = useTranslation("quiz");
 
   const language = (["en", "fr"].includes(i18n.language) ? i18n.language : "en") as Language;
 
