@@ -5,17 +5,17 @@ import Footer from "./Footer";
 
 const floatingIcons = [
   { Icon: Shield, size: 48, color: "#00bcd4", top: 10, left: 700, delay: "0s" },
-  { Icon: Lock, size: 40, color: "#8bc34a", top: 700, left: 990, delay: "2.5s" },
+  { Icon: Lock, size: 40, color: "#8bc34a", top: 400, left: 990, delay: "2.5s" },
   { Icon: Key, size: 36, color: "#ff5722", top: 150, left: 90, delay: "4s" },
   { Icon: AlertCircle, size: 50, color: "#ff9800", top: 320, left: 350, delay: "1.7s" },
   { Icon: Wifi, size: 44, color: "#673ab7", top: 90, left: 420, delay: "3.2s" },
   { Icon: Shield, size: 48, color: "#00bcd4", top: 50, left: 30, delay: "0s" },
   { Icon: Lock, size: 40, color: "#8bc34a", top: 520, left: 320, delay: "2.5s" },
   { Icon: Key, size: 36, color: "#ff5722", top: 450, left: 620, delay: "4s" },
-  { Icon: AlertCircle, size: 50, color: "#ff9800", top: 720, left: 850, delay: "1.7s" },
+  { Icon: AlertCircle, size: 50, color: "#ff9800", top: 520, left: 850, delay: "1.7s" },
   { Icon: Wifi, size: 44, color: "#673ab7", top: 420, left: 720, delay: "3.2s" },
-  { Icon: Lock, size: 40, color: "#8bc34a", top: 320, left: 1420, delay: "2.5s" },
-  { Icon: Shield, size: 48, color: "#00bcd4", top: 150, left: 1520, delay: "0s" },
+  { Icon: Lock, size: 40, color: "#8bc34a", top: 320, left: 1320, delay: "2.5s" },
+  { Icon: Shield, size: 48, color: "#00bcd4", top: 150, left: 1220, delay: "0s" },
   { Icon: Key, size: 36, color: "#ff5722", top: 530, left: 1400, delay: "4s" },
   { Icon: AlertCircle, size: 50, color: "#ff9800", top: 320, left: 1100, delay: "1.7s" },
 
