@@ -11,11 +11,11 @@ export default function Footer({ repoUrl }: FooterProps) {
   return (
     <footer
       style={{
-        marginTop: "17rem",
+        marginTop: "15rem",
         background: "#0d1117",
         color: "#e0e0e0",
         textAlign: "center",
-        padding: "0.8rem",
+        padding: "0.5rem",
         borderTop: "1px solid #00bcd4",
         fontFamily: "'Courier New', monospace",
         fontSize: "0.9rem",
